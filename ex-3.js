@@ -81,4 +81,15 @@ let orders = [
   },
 ];
 
-// Start coding here
+// Ans Total paid amount of Birdie Shepland: 379,925 Baht
+let totalPaid = [];
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].customerName == "Birdie Shepland") {
+    totalPaid = orders[i].productPrice * orders[i].productQuantity;
+  }
+}
+
+console.log(
+  `Total paid amount of Birdie Shepland: ${totalPaid.toLocaleString()} Baht`
+);
+

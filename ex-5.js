@@ -81,4 +81,20 @@ let orders = [
   },
 ];
 
-// Start coding here
+//The most expensive order is order id 8 (36,884,000 Baht)
+
+let maxOrderPrice = [];
+let orderId = [];
+// for (let i = 0; i < 1; i++) {
+
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].productPrice * orders[i].productQuantity > maxOrderPrice) {
+    maxOrderPrice = orders[i].productPrice * orders[i].productQuantity;
+    orderId = orders[i].id;
+  }
+}
+maxOrderPrice = maxOrderPrice.toLocaleString();
+console.log(
+  `The most expensive order is order id ${orderId} (${maxOrderPrice} Baht)`
+);
+
