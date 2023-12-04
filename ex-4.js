@@ -81,4 +81,16 @@ let orders = [
   },
 ];
 
-// Start coding here
+// Ans The most expensive product in orders: Wine - Red, Harrow Estates, Cab
+
+let maxPrice = [];
+let productName = [];
+
+console.log(maxPrice);
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].productPrice > maxPrice) {
+    maxPrice = orders[i].productPrice;
+    productName = orders[i].productName;
+  }
+}
+console.log(`The most expensive product in orders: ${productName}`);

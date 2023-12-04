@@ -81,4 +81,14 @@ let orders = [
   },
 ];
 
-// Start coding here
+// Ans Paid by JCB credit card amount: (8,515,926 Baht)
+
+let totalPrice = [0];
+
+for (let i = 0; i < 9; i++) {
+  if (orders[i].creditCardType == "jcb") {
+    totalPrice[0] += orders[i].productPrice * orders[i].productQuantity;
+  }
+}
+totalPrice = totalPrice.toLocaleString();
+console.log(`Paid by JCB credit card amount: (${totalPrice}  Baht)`);
